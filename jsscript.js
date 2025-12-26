@@ -9,34 +9,6 @@ window.addEventListener("load", () => {
   }
 });
 
-// === EmailJS Contact Form ===
-// Replace placeholders below with your actual EmailJS credentials:
-// emailjs.init("YOUR_PUBLIC_KEY");
-// emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {...})
-
-if (typeof emailjs !== "undefined") {
-  emailjs.init("YOUR_PUBLIC_KEY"); // Replace later
-
-  const form = document.getElementById("contact-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      emailjs
-        .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-          from_name: this.name.value,
-          from_email: this.email.value,
-          message: this.message.value,
-        })
-        .then(() => {
-          window.location.href = "thankyou.html";
-        })
-        .catch(() => {
-          document.getElementById("form-status").innerText = "❌ Error sending message.";
-        });
-    });
-  }
-}
-
 // === Back to Top Button ===
 const backToTop = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
@@ -53,7 +25,7 @@ if (backToTop) {
 const chatWidget = document.getElementById("chatWidget");
 if (chatWidget) {
   chatWidget.addEventListener("click", () => {
-    alert("💬 Hi there! Chat support coming soon. Visit our Contact page to reach us!");
+    alert("💬 Chat support coming soon! Please use our Contact page.");
   });
 }
 
@@ -79,3 +51,4 @@ if (subscribeBtn) {
     }
   });
 }
+
