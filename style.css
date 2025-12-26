@@ -1,81 +1,45 @@
-/* =====================================================
-   Dhaara Shopee — Modern Dark Dropshipping Theme
-   Author: You ✨
-   ===================================================== */
-
-/* === Base Theme === */
-:root {
-  --bg: #0a0a0a;
-  --text: #ffffff;
-  --accent: #00d2ff;
-  --gradient: linear-gradient(90deg, #ff5f95, #00d2ff);
-}
-
+/* --- Global Reset --- */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  background-color: #0a0a0a;
+  color: #e5e5e5;
+  line-height: 1.6;
   overflow-x: hidden;
-  min-height: 100vh;
 }
 
-/* Links & Typography */
-a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-a:hover {
-  color: #ff5f95;
-}
-
-h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-}
-
-/* =====================================================
-   PRELOADER
-   ===================================================== */
+/* --- Preloader --- */
 #preloader {
   position: fixed;
   inset: 0;
-  background: #0a0a0a;
+  background: #000;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   z-index: 9999;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-
-#preloader.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 #preloader .logo {
   font-size: 1.8rem;
-  background: var(--gradient);
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff4f8b, #00e0d1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 1.2rem;
-  letter-spacing: 1px;
+  margin-bottom: 1rem;
 }
 
-#preloader .spinner {
-  width: 45px;
-  height: 45px;
-  border: 3px solid rgba(255,255,255,0.15);
-  border-top: 3px solid var(--accent);
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top: 3px solid #00e0d1;
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
   animation: spin 1s linear infinite;
 }
 
@@ -84,225 +48,228 @@ h1, h2, h3 {
   100% { transform: rotate(360deg); }
 }
 
-/* =====================================================
-   HEADER / NAVIGATION
-   ===================================================== */
+/* --- Header --- */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 1.2rem 5%;
+  background: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid #1c1c1c;
   position: sticky;
   top: 0;
-  background: rgba(10,10,10,0.85);
-  backdrop-filter: blur(8px);
   z-index: 100;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 header .logo {
-  font-size: 1.4rem;
-  background: var(--gradient);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+header .logo span {
+  background: linear-gradient(90deg, #ff4f8b, #00e0d1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
 }
 
 nav a {
-  margin: 0 1rem;
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 15px;
   font-weight: 500;
-  color: #bbb;
-}
-nav a.active,
-nav a:hover {
-  color: var(--accent);
+  transition: 0.3s;
 }
 
-/* =====================================================
-   HERO SECTION
-   ===================================================== */
+nav a:hover,
+nav a.active {
+  color: #00e0d1;
+}
+
+/* --- Hero Section --- */
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   text-align: center;
-  height: 80vh;
-  padding: 0 1rem;
-  background: radial-gradient(circle at center, #111 0%, #000 100%);
-  animation: fadeIn 1s ease forwards;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #111, #000);
 }
 
 .hero h2 {
+  font-family: 'Poppins', sans-serif;
   font-size: 2.2rem;
+  background: linear-gradient(90deg, #ff4f8b, #00e0d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
-  color: var(--accent);
-  font-weight: 700;
-  animation: fadeUp 1s ease;
 }
 
 .hero p {
-  max-width: 600px;
-  color: #ccc;
-  margin: 0 auto 1.5rem;
-  animation: fadeUp 1.3s ease;
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 2rem;
 }
 
 .btn {
-  background: var(--gradient);
-  border: none;
-  padding: 0.8rem 1.8rem;
+  display: inline-block;
+  background: linear-gradient(90deg, #ff4f8b, #00e0d1);
   color: #fff;
-  border-radius: 5px;
+  padding: 0.75rem 1.6rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
   font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0,210,255,0.3);
+  transition: 0.3s;
 }
 
-/* =====================================================
-   FOOTER
-   ===================================================== */
-footer {
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* --- Content Sections --- */
+.content {
+  padding: 4rem 8%;
+  background: #0f0f0f;
   text-align: center;
-  padding: 1.5rem 1rem;
+}
+
+.content h3 {
+  color: #00e0d1;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  color: #bbb;
+}
+
+/* --- Product Grid --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 4rem 8%;
+}
+
+.product-card {
+  background: #111;
+  border: 1px solid #1c1c1c;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Blog --- */
+.blog-post {
+  background: #111;
+  border-left: 3px solid #00e0d1;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* --- Contact Form --- */
+.contact-section {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: linear-gradient(180deg, #0d0d0d, #000);
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #ff4f8b, #00e0d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  color: #bbb;
+  margin-bottom: 2rem;
+}
+
+form {
+  background: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 450px;
+  margin: 0 auto;
+  border: 1px solid #1c1c1c;
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #333;
   background: #0a0a0a;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  color: #777;
+  color: #e5e5e5;
   font-size: 0.9rem;
 }
 
-/* =====================================================
-   FLOATING BUTTONS
-   ===================================================== */
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: var(--gradient);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  z-index: 1000;
-}
-#backToTop:hover {
-  transform: scale(1.1);
+textarea {
+  resize: none;
+  height: 120px;
 }
 
-#chatWidget {
-  position: fixed;
-  bottom: 30px;
-  left: 30px;
-  background: var(--gradient);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 1.4rem;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  transition: transform 0.3s;
-  z-index: 1000;
-}
-#chatWidget:hover {
-  transform: scale(1.1);
-}
-
-/* =====================================================
-   NEWSLETTER POPUP
-   ===================================================== */
-.popup {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-  transition: opacity 0.5s ease;
-}
-.popup.hidden {
-  visibility: hidden;
-  opacity: 0;
-}
-.popup-content {
-  background: #141414;
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: center;
-  max-width: 400px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  position: relative;
-}
-.popup-content h3 {
-  color: var(--accent);
-  margin-bottom: 0.5rem;
-}
-.popup-content input {
-  width: 80%;
-  padding: 0.6rem;
-  margin-bottom: 1rem;
+button {
+  width: 100%;
+  background: linear-gradient(90deg, #ff4f8b, #00e0d1);
   border: none;
+  padding: 0.8rem;
+  color: #fff;
   border-radius: 5px;
-  background: #1a1a1a;
-  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.popup-content input::placeholder {
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  border-top: 1px solid #1c1c1c;
   color: #777;
 }
-#closePopup {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer;
-  color: #fff;
-  font-size: 1rem;
-}
 
-/* =====================================================
-   ANIMATIONS
-   ===================================================== */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* =====================================================
-   RESPONSIVE DESIGN
-   ===================================================== */
+/* --- Responsive --- */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 1rem;
+  nav a {
+    margin: 0 8px;
   }
-  nav {
-    margin-top: 0.5rem;
-  }
+
   .hero h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
-  .hero p {
-    font-size: 0.9rem;
-  }
-  .btn {
-    padding: 0.6rem 1.4rem;
+
+  .product-grid {
+    grid-template-columns: 1fr;
   }
 }
