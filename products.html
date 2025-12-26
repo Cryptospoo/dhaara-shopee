@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products | Dhaara Shopee</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header class="sticky">
-    <h1 class="logo">Dhaara Shopee</h1>
+  <header>
+    <h1 class="logo">Dhaara <span>Shopee</span></h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -18,25 +20,36 @@
     </nav>
   </header>
 
-  <section class="hero small-hero">
+  <section class="hero">
     <h2>Our Products</h2>
-    <p>Browse top-quality items ready for your online store.</p>
+    <p>Explore trending products — fashion, gadgets, home décor, and more.</p>
   </section>
 
-  <section class="products">
-    <h3>Product Grid</h3>
-    <div class="grid products-grid">
-      <div class="product-card">Empty Slot</div>
-      <div class="product-card">Empty Slot</div>
-      <div class="product-card">Empty Slot</div>
-      <div class="product-card">Empty Slot</div>
-      <div class="product-card">Empty Slot</div>
-      <div class="product-card">Empty Slot</div>
+  <section class="product-grid">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200" alt="Product 1">
+      <h3>Smart Watch</h3>
+      <p>$49.99</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200" alt="Product 2">
+      <h3>Home Decor Lamp</h3>
+      <p>$29.99</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200" alt="Product 3">
+      <h3>Wireless Earbuds</h3>
+      <p>$39.99</p>
+      <button class="btn">Add to Cart</button>
     </div>
   </section>
 
   <footer>
     <p>© 2025 Dhaara Shopee. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
