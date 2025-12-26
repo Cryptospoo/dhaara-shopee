@@ -1,0 +1,15 @@
+dhaara-shopee/
+│
+├── index.html
+├── about.html
+├── products.html
+├── blog.html
+├── contact.html
+├── thankyou.html
+├── 404.html
+│
+├── css/
+│   └── style.css
+│
+└── js/
+    └── script.js
