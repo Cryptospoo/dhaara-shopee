@@ -1,60 +1,35 @@
-/* =====================================================
-   Dhaara Shopee - JavaScript Interactions
-   Author: You ✨
-   ===================================================== */
-
-// Wait until page resources are loaded
+// === Preloader ===
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
-  setTimeout(() => {
-    preloader.classList.add("hidden");
-    document.body.style.overflow = "auto";
-  }, 1200); // Wait 1.2s before fading out
-});
-
-// Smooth Scroll to Top
-const backToTop = document.getElementById("backToTop");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
-    backToTop.style.display = "flex";
-  } else {
-    backToTop.style.display = "none";
-  }
-});
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// Newsletter Popup
-const newsletterPopup = document.getElementById("newsletterPopup");
-const closePopup = document.getElementById("closePopup");
-const subscribeBtn = document.getElementById("subscribeBtn");
-
-window.addEventListener("load", () => {
-  // Show popup after 5 seconds
-  setTimeout(() => {
-    newsletterPopup.classList.remove("hidden");
-  }, 5000);
-});
-
-closePopup.addEventListener("click", () => {
-  newsletterPopup.classList.add("hidden");
-});
-
-subscribeBtn.addEventListener("click", () => {
-  const emailInput = document.getElementById("newsletterEmail");
-  const email = emailInput.value.trim();
-
-  if (email === "") {
-    alert("Please enter a valid email address.");
-  } else {
-    alert(`Thank you for subscribing, ${email}!`);
-    newsletterPopup.classList.add("hidden");
+  if (preloader) {
+    preloader.style.transition = "opacity 0.6s ease";
+    preloader.style.opacity = "0";
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 600);
   }
 });
 
-// Floating Chat Widget (Demo)
-const chatWidget = document.getElementById("chatWidget");
-chatWidget.addEventListener("click", () => {
-  alert("💬 Chat feature placeholder. Integrate your chat service here later.");
+// === Smooth Scroll ===
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    const targetId = link.getAttribute('href');
+    if (targetId.startsWith("#")) {
+      e.preventDefault();
+      document.querySelector(targetId).scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  });
 });
+
+// === Sticky Header Active Link Highlight ===
+const currentPage = window.location.pathname.split("/").pop();
+document.querySelectorAll("nav a").forEach(link => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  }
+});
+
+// === Optional Console Check ===
+console.log("✅ Dhaara Shopee site scripts loaded successfully!");
