@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Dhaara Shopee</title>
-  <meta name="description" content="We’re here to help. Contact Dhaara Shopee for queries, support, or collaboration opportunities." />
+  <meta name="description" content="Reach out to Dhaara Shopee — we're here to help with your shopping experience or any inquiries." />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
@@ -32,17 +32,16 @@
   <!-- Hero -->
   <section class="hero">
     <h1>We’re Here to Help</h1>
-    <p>Have a question, suggestion, or collaboration idea?  
-    Our team would love to hear from you.</p>
+    <p>Have a question or collaboration idea? Our team would love to hear from you.</p>
   </section>
 
-  <!-- Contact Info (simplified) -->
+  <!-- Contact Info -->
   <section class="content" style="text-align:center; padding:3rem 2rem;">
-    <h2>Reach Us</h2>
+    <h2>Contact Information</h2>
     <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; margin-top:2rem;">
       <div style="background:#161616; padding:1.5rem 2rem; border-radius:8px; min-width:250px;">
         <h3>📞 Call Us</h3>
-        <p>+91 98765 43210</p>
+        <p>+91 74064 09205</p>
       </div>
       <div style="background:#161616; padding:1.5rem 2rem; border-radius:8px; min-width:250px;">
         <h3>📧 Email</h3>
@@ -51,35 +50,44 @@
     </div>
   </section>
 
-  <!-- Contact Form (centered, balanced layout) -->
-  <section class="content" style="padding:4rem 2rem;">
-    <h2 style="text-align:center;">Send Us a Message</h2>
-    <form id="contactForm" action="#" method="POST" style="max-width:600px; margin:2rem auto; background:#161616; padding:2rem; border-radius:8px;">
-      <!-- Replace '#' with your Formspree URL later -->
-      <div class="form-group" style="margin-bottom:1.5rem;">
-        <label for="name" style="display:block; text-align:left; margin-bottom:0.5rem;">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required style="width:100%; padding:0.8rem; border:none; border-radius:5px; background:#1e1e1e; color:#fff;" />
-      </div>
+  <!-- Contact Form -->
+  <section class="content" style="padding:5rem 2rem; display:flex; justify-content:center;">
+    <div style="background:rgba(22,22,22,0.85); border:1px solid rgba(255,255,255,0.05); border-radius:12px; padding:2.5rem; max-width:600px; width:100%; box-shadow:0 0 25px rgba(0,0,0,0.4);">
+      <h2 style="text-align:center; margin-bottom:1.5rem;">Send Us a Message</h2>
+      <form id="contactForm" action="#" method="POST">
+        <!-- Replace '#' with your Formspree URL later -->
+        <div class="form-group" style="margin-bottom:1.2rem;">
+          <label for="name" style="display:block; text-align:left; margin-bottom:0.4rem;">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required
+            style="width:100%; padding:0.9rem; border:none; border-radius:6px; background:#1e1e1e; color:#fff;"/>
+        </div>
 
-      <div class="form-group" style="margin-bottom:1.5rem;">
-        <label for="email" style="display:block; text-align:left; margin-bottom:0.5rem;">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required style="width:100%; padding:0.8rem; border:none; border-radius:5px; background:#1e1e1e; color:#fff;" />
-      </div>
+        <div class="form-group" style="margin-bottom:1.2rem;">
+          <label for="email" style="display:block; text-align:left; margin-bottom:0.4rem;">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required
+            style="width:100%; padding:0.9rem; border:none; border-radius:6px; background:#1e1e1e; color:#fff;"/>
+        </div>
 
-      <div class="form-group" style="margin-bottom:1.5rem;">
-        <label for="subject" style="display:block; text-align:left; margin-bottom:0.5rem;">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="What's this about?" required style="width:100%; padding:0.8rem; border:none; border-radius:5px; background:#1e1e1e; color:#fff;" />
-      </div>
+        <div class="form-group" style="margin-bottom:1.2rem;">
+          <label for="subject" style="display:block; text-align:left; margin-bottom:0.4rem;">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?" required
+            style="width:100%; padding:0.9rem; border:none; border-radius:6px; background:#1e1e1e; color:#fff;"/>
+        </div>
 
-      <div class="form-group" style="margin-bottom:1.5rem;">
-        <label for="message" style="display:block; text-align:left; margin-bottom:0.5rem;">Message</label>
-        <textarea id="message" name="message" rows="6" placeholder="Type your message..." required style="width:100%; padding:0.8rem; border:none; border-radius:5px; background:#1e1e1e; color:#fff; resize:none;"></textarea>
-      </div>
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label for="message" style="display:block; text-align:left; margin-bottom:0.4rem;">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Type your message..." required
+            style="width:100%; padding:0.9rem; border:none; border-radius:6px; background:#1e1e1e; color:#fff; resize:none;"></textarea>
+        </div>
 
-      <div style="text-align:center;">
-        <button type="submit" class="btn">Send Message</button>
-      </div>
-    </form>
+        <div style="text-align:center;">
+          <button type="submit" class="btn" 
+            style="padding:0.9rem 2.5rem; border:none; border-radius:6px; background:linear-gradient(90deg,#ff4f8b,#00e0d1); color:white; font-weight:600; cursor:pointer; transition:0.3s;">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -91,3 +99,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
