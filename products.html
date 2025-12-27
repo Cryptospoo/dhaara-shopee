@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products | Dhaara Shopee</title>
-  <meta name="description" content="Explore trending products at Dhaara Shopee — discover fashion, gadgets, home décor, and beauty essentials with smooth checkout." />
+  <title>Shop Products | Dhaara Shopee</title>
+  <meta name="description" content="Explore Dhaara Shopee's premium collection — elegant fashion, sleek gadgets, décor, and beauty essentials crafted for modern living." />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
@@ -23,6 +23,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="products.html" class="active">Products</a>
+      <a href="our-promise.html">Our Promise</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -30,61 +31,103 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Our Products</h1>
-    <p>Browse through our curated collection of trending global items, ready for instant dropshipping to your customers.</p>
+    <h1>Our Curated Collections</h1>
+    <p>Handpicked products blending luxury, comfort, and innovation — designed for the modern lifestyle.</p>
+  </section>
+
+  <!-- Category Filters -->
+  <section class="content" style="text-align:center; padding:3rem 2rem;">
+    <h2>Browse by Category</h2>
+    <div class="category-buttons" style="margin-top:1rem;">
+      <button class="btn filter-btn" data-filter="all">All</button>
+      <button class="btn filter-btn" data-filter="fashion">Fashion</button>
+      <button class="btn filter-btn" data-filter="gadgets">Gadgets</button>
+      <button class="btn filter-btn" data-filter="decor">Home Décor</button>
+      <button class="btn filter-btn" data-filter="beauty">Beauty</button>
+    </div>
   </section>
 
   <!-- Product Grid -->
-  <section class="product-grid">
-    <div class="product-card">
-      <img src="https://via.placeholder.com/400x250/0d0d0d/00e0d1?text=Smart+Watch" alt="Smart Watch" />
-      <h3>Smart Fitness Watch</h3>
-      <p>Monitor your health and stay connected with style.</p>
-      <a href="#" class="btn">View Details</a>
-    </div>
+  <section class="product-grid" style="padding:2rem;">
+    <h2 style="text-align:center;">Our Featured Products</h2>
+    <div class="product-container" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; margin-top:2rem;">
 
-    <div class="product-card">
-      <img src="https://via.placeholder.com/400x250/111/ff4f8b?text=Eco+Bottle" alt="Eco Bottle" />
-      <h3>Eco-Friendly Water Bottle</h3>
-      <p>Reusable, durable, and environmentally conscious hydration.</p>
-      <a href="#" class="btn">View Details</a>
-    </div>
+      <!-- Fashion Products -->
+      <div class="product-card" data-category="fashion">
+        <img src="https://via.placeholder.com/400x250/0d0d0d/00e0d1?text=Silk+Kurta" alt="Kurta">
+        <h3>Elegant Silk Kurta</h3>
+        <p>Soft, graceful, and timelessly stylish. Perfect for festive occasions.</p>
+        <span class="price">$79.00</span>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
 
-    <div class="product-card">
-      <img src="https://via.placeholder.com/400x250/0d0d0d/00e0d1?text=Beauty+Kit" alt="Beauty Kit" />
-      <h3>Complete Beauty Essentials Kit</h3>
-      <p>All your self-care favorites in one portable package.</p>
-      <a href="#" class="btn">View Details</a>
-    </div>
+      <div class="product-card" data-category="fashion">
+        <img src="https://via.placeholder.com/400x250/111/ff4f8b?text=Evening+Gown" alt="Gown">
+        <h3>Velvet Evening Gown</h3>
+        <p>Make a statement with our handcrafted luxury collection.</p>
+        <span class="price">$129.00</span>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
 
-    <div class="product-card">
-      <img src="https://via.placeholder.com/400x250/111/ff4f8b?text=Home+Light" alt="Home Light" />
-      <h3>Smart Home Lighting</h3>
-      <p>Control your ambiance with voice or app automation.</p>
-      <a href="#" class="btn">View Details</a>
-    </div>
+      <!-- Gadgets -->
+      <div class="product-card" data-category="gadgets">
+        <img src="https://via.placeholder.com/400x250/0d0d0d/00e0d1?text=Smartwatch" alt="Smartwatch">
+        <h3>SmartFit Watch</h3>
+        <p>Track wellness and style in one — elegance meets innovation.</p>
+        <span class="price">$149.00</span>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
 
-    <div class="product-card">
-      <img src="https://via.placeholder.com/400x250/0d0d0d/00e0d1?text=Wireless+Earbuds" alt="Wireless Earbuds" />
-      <h3>Noise-Cancelling Earbuds</h3>
-      <p>Crystal-clear audio and comfort for everyday use.</p>
-      <a href="#" class="btn">View Details</a>
-    </div>
+      <div class="product-card" data-category="gadgets">
+        <img src="https://via.placeholder.com/400x250/111/ff4f8b?text=Bluetooth+Speaker" alt="Speaker">
+        <h3>Bluetooth Speaker</h3>
+        <p>Experience powerful sound in a minimalist form.</p>
+        <span class="price">$99.00</span>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
 
-    <div class="product-card">
-      <img src="https://via.placeholder.com/400x250/111/ff4f8b?text=Home+Decor" alt="Home Decor" />
-      <h3>Modern Home Décor</h3>
-      <p>Transform your space with elegant, minimal accents.</p>
-      <a href="#" class="btn">View Details</a>
+      <!-- Home Decor -->
+      <div class="product-card" data-category="decor">
+        <img src="https://via.placeholder.com/400x250/0d0d0d/00e0d1?text=Decor+Lamp" alt="Lamp">
+        <h3>Handcrafted Table Lamp</h3>
+        <p>Illuminate your interiors with elegant, artisan craftsmanship.</p>
+        <span class="price">$59.00</span>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+
+      <div class="product-card" data-category="decor">
+        <img src="https://via.placeholder.com/400x250/111/ff4f8b?text=Wall+Art" alt="Wall Art">
+        <h3>Abstract Wall Art</h3>
+        <p>Transform spaces with vibrant, modern art pieces.</p>
+        <span class="price">$89.00</span>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+
+      <!-- Beauty -->
+      <div class="product-card" data-category="beauty">
+        <img src="https://via.placeholder.com/400x250/0d0d0d/00e0d1?text=Organic+Cream" alt="Cream">
+        <h3>Organic Face Cream</h3>
+        <p>Hydration and radiance powered by natural ingredients.</p>
+        <span class="price">$39.00</span>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+
+      <div class="product-card" data-category="beauty">
+        <img src="https://via.placeholder.com/400x250/111/ff4f8b?text=Perfume" alt="Perfume">
+        <h3>Signature Perfume</h3>
+        <p>A scent that defines elegance and sophistication.</p>
+        <span class="price">$69.00</span>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Dhaara Shopee. All rights reserved.</p>
+    <p>© 2025 Dhaara Shopee. Crafted for the modern lifestyle.</p>
   </footer>
 
-  <!-- Back to Top -->
   <button id="backToTop" title="Go to top">↑</button>
 
   <script src="script.js"></script>
