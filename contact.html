@@ -4,13 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Dhaara Shopee</title>
+  <meta name="description" content="Get in touch with Dhaara Shopee for support, partnerships, or inquiries about your dropshipping business." />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="logo">Dhaara <span>Shopee</span></div>
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Header -->
   <header>
-    <h1 class="logo">Dhaara <span>Shopee</span></h1>
+    <div class="logo">Dhaara <span>Shopee</span></div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -20,25 +28,81 @@
     </nav>
   </header>
 
+  <!-- Hero -->
   <section class="hero">
-    <h2>Contact Us</h2>
-    <p>Have questions? Reach out for support or partnership inquiries.</p>
+    <h1>Contact Us</h1>
+    <p>Have a question, idea, or need support? Our team is here to help you grow your dropshipping business with ease.</p>
   </section>
 
-  <section class="content">
-    <div class="container">
-      <form>
-        <input type="text" placeholder="Your Name" required><br><br>
-        <input type="email" placeholder="Your Email" required><br><br>
-        <textarea placeholder="Your Message" rows="5" required></textarea><br><br>
-        <button class="btn" type="submit">Send Message</button>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="#" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message..." rows="5" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
       </form>
+    </div>
+
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <p><strong>Email:</strong> support@dhaarashopee.com</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Location:</strong> Remote – Global Operations</p>
+      <p><strong>Business Hours:</strong> Mon–Sat: 9:00 AM – 7:00 PM IST</p>
+
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <a href="#">🌐 Website</a>
+        <a href="#">📘 Facebook</a>
+        <a href="#">📸 Instagram</a>
+        <a href="#">🐦 Twitter</a>
+      </div>
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>How does Dhaara Shopee dropshipping work?</h3>
+      <p>We connect store owners with trusted suppliers who handle fulfillment and shipping. You focus on sales and marketing, we handle logistics.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do I need to buy inventory upfront?</h3>
+      <p>No, you only pay for products when a customer places an order — making it 100% risk-free for you.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I use my own branding?</h3>
+      <p>Absolutely. You can customize your storefront, domain, and packaging to reflect your unique brand identity.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is customer support available?</h3>
+      <p>Yes, our dedicated support team is available 6 days a week to help you with any business or technical questions.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>© 2025 Dhaara Shopee. All rights reserved.</p>
   </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" title="Go to top">↑</button>
 
   <script src="script.js"></script>
 </body>
